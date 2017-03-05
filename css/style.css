@@ -51,6 +51,36 @@ body {
     display: inline-block;
     margin: 10px 20px;
 }
+/* dymek */
+.dymek {
+    position: relative;
+}
+.dymek__lista {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: blue;
+    list-style-type: none;
+    padding-left: 0;
+    z-index: 1;
+}
+.dymek:hover .dymek__lista {
+    display: block;
+}
+/* trójkącik nad listą */
+.dymek__lista::after {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border-top: 10px solid blue;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.dymek__lista::before {
+    width: 100%;
+    top: -
+}
 /* slider section */
 .slider {
     position: relative;
@@ -249,3 +279,31 @@ body {
 .cennik__center .cennik__button {
     background-color: #fff;
     color: #26C6AC;
+}
+
+/* formularz */
+/* checkbox pod divem z grafiką.
+html
+<input class=heckbox type=checkbox>
+<div>znaczek</div>
+
+css
+checkbox {
+    opacity: 0;
+}
+div {
+    background-color: white;
+}
+checkbox:checked + div {
+    background-image: znaczek;
+}
+
+*/
+.checkbox {
+    opacity: 0;
+}
+
+/* footer */
+.copyright {
+
+}
